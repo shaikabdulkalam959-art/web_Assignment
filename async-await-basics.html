@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Async/Await Basics</title>
+<link rel="stylesheet" href="../assets/style.css">
+
+</head>
+<body>
+
+  <header class="site-header"><h1>JavaScript Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>62. Async/Await Basics</h1>
+      <p class="description">Demonstrates the async/await syntax as a cleaner way to work with Promises, including try/catch for errors.</p>
+
+      <div class="demo-area">
+<button onclick="runAsyncDemo()">Run Async/Await Demo</button><pre id="asyncOutput"></pre>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to JavaScript Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>JavaScript Programs &mdash; Program 62</footer>
+<script>
+function delay(ms, value) {
+  return new Promise(resolve => setTimeout(() => resolve(value), ms));
+}
+async function runAsyncDemo() {
+  const output = document.getElementById('asyncOutput');
+  output.textContent = 'Step 1: starting...';
+  const step1 = await delay(700, 'Step 1 complete');
+  output.textContent = step1 + '\nStep 2: continuing...';
+  const step2 = await delay(700, 'Step 2 complete');
+  output.textContent = step1 + '\n' + step2 + '\nAll async steps finished!';
+}
+</script>
+</body>
+</html>

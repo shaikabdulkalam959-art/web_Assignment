@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Object.assign() and Merging Objects</title>
+<link rel="stylesheet" href="../assets/style.css">
+
+</head>
+<body>
+
+  <header class="site-header"><h1>JavaScript Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>51. Object.assign() and Merging Objects</h1>
+      <p class="description">Demonstrates combining multiple objects into one using Object.assign() and the spread operator.</p>
+
+      <div class="demo-area">
+<pre id="mergeOutput"></pre>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to JavaScript Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>JavaScript Programs &mdash; Program 51</footer>
+<script>
+const defaults = { theme: 'light', fontSize: 14 };
+const userPrefs = { fontSize: 18, notifications: true };
+const merged1 = Object.assign({}, defaults, userPrefs);
+const merged2 = { ...defaults, ...userPrefs };
+document.getElementById('mergeOutput').textContent =
+`defaults: ${JSON.stringify(defaults)}
+userPrefs: ${JSON.stringify(userPrefs)}
+Object.assign merge: ${JSON.stringify(merged1)}
+Spread operator merge: ${JSON.stringify(merged2)}`;
+</script>
+</body>
+</html>

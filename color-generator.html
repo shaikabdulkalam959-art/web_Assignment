@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Color Generator</title>
+<link rel="stylesheet" href="../assets/style.css">
+
+</head>
+<body>
+
+  <header class="site-header"><h1>JavaScript Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>12. Random Color Generator</h1>
+      <p class="description">Generates a random hex color code, displays a live color swatch and lets you copy the code.</p>
+
+      <div class="demo-area">
+<div class="row"><span class="swatch" id="colorSwatch" style="background:#2e5aac;"></span><span id="colorCode" style="font-weight:700;">#2E5AAC</span></div><div class="row"><button onclick="generateColor()">Generate Random Color</button><button onclick="copyColor()">Copy Code</button></div><p id="copyMsg" style="color:#1e8449; font-weight:600;"></p>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to JavaScript Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>JavaScript Programs &mdash; Program 12</footer>
+<script>
+let currentColor = '#2E5AAC';
+function generateColor() {
+  const hex = '#' + Math.floor(Math.random() * 0xffffff).toString(16).padStart(6, '0').toUpperCase();
+  currentColor = hex;
+  document.getElementById('colorSwatch').style.background = hex;
+  document.getElementById('colorCode').textContent = hex;
+  document.getElementById('copyMsg').textContent = '';
+}
+function copyColor() {
+  navigator.clipboard.writeText(currentColor).then(() => {
+    document.getElementById('copyMsg').textContent = `${currentColor} copied to clipboard!`;
+  }).catch(() => {
+    document.getElementById('copyMsg').textContent = 'Copy not supported in this context.';
+  });
+}
+</script>
+</body>
+</html>

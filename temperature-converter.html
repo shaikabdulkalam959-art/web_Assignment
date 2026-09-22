@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Temperature Converter</title>
+<link rel="stylesheet" href="../assets/style.css">
+
+</head>
+<body>
+
+  <header class="site-header"><h1>JavaScript Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>10. Temperature Converter</h1>
+      <p class="description">Converts a temperature value between Celsius, Fahrenheit and Kelvin using standard formulas.</p>
+
+      <div class="demo-area">
+<div class="demo-form"><label for="tempValue">Temperature</label><input type="number" id="tempValue" value="0"><label for="tempFrom">From</label><select id="tempFrom"><option value="C">Celsius</option><option value="F">Fahrenheit</option><option value="K">Kelvin</option></select><button onclick="convertTemp()">Convert</button></div><div class="box" id="tempResult" style="margin-top:14px;"></div>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to JavaScript Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>JavaScript Programs &mdash; Program 10</footer>
+<script>
+function convertTemp() {
+  const value = parseFloat(document.getElementById('tempValue').value);
+  const from = document.getElementById('tempFrom').value;
+  if (isNaN(value)) { document.getElementById('tempResult').textContent = 'Enter a valid number.'; return; }
+  let celsius;
+  if (from === 'C') celsius = value;
+  else if (from === 'F') celsius = (value - 32) * 5 / 9;
+  else celsius = value - 273.15;
+  const fahrenheit = celsius * 9 / 5 + 32;
+  const kelvin = celsius + 273.15;
+  document.getElementById('tempResult').innerHTML =
+    `${celsius.toFixed(2)} °C &nbsp;|&nbsp; ${fahrenheit.toFixed(2)} °F &nbsp;|&nbsp; ${kelvin.toFixed(2)} K`;
+}
+</script>
+</body>
+</html>

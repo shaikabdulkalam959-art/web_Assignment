@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Functions and Parameters</title>
+<link rel="stylesheet" href="../assets/style.css">
+
+</head>
+<body>
+
+  <header class="site-header"><h1>JavaScript Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>57. Functions and Parameters</h1>
+      <p class="description">Demonstrates function declarations, function expressions and passing multiple parameters.</p>
+
+      <div class="demo-area">
+<pre id="funcOutput"></pre>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to JavaScript Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>JavaScript Programs &mdash; Program 57</footer>
+<script>
+// Function declaration
+function multiply(a, b) { return a * b; }
+
+// Function expression
+const divide = function (a, b) { return b !== 0 ? a / b : 'Cannot divide by zero'; };
+
+document.getElementById('funcOutput').textContent =
+`multiply(6, 7) = ${multiply(6, 7)}
+divide(20, 4) = ${divide(20, 4)}
+divide(5, 0) = ${divide(5, 0)}`;
+</script>
+</body>
+</html>

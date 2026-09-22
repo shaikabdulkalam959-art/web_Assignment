@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arrow Functions &amp; Template Literals</title>
+<link rel="stylesheet" href="../assets/style.css">
+
+</head>
+<body>
+
+  <header class="site-header"><h1>JavaScript Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>52. Arrow Functions &amp; Template Literals</h1>
+      <p class="description">Demonstrates the concise arrow function syntax and template literals for readable string interpolation.</p>
+
+      <div class="demo-area">
+<pre id="arrowOutput"></pre>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to JavaScript Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>JavaScript Programs &mdash; Program 52</footer>
+<script>
+const square = n => n * n;
+const add = (a, b) => a + b;
+const name = 'Shaik', score = 92;
+const message = `Hello ${name}, you scored ${score} marks (${score >= 90 ? 'Excellent' : 'Good'}).`;
+document.getElementById('arrowOutput').textContent =
+`square(5) = ${square(5)}
+add(3, 4) = ${add(3, 4)}
+Template literal: ${message}`;
+</script>
+</body>
+</html>

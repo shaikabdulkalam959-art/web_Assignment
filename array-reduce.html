@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Array.reduce()</title>
+<link rel="stylesheet" href="../assets/style.css">
+
+</head>
+<body>
+
+  <header class="site-header"><h1>JavaScript Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>46. Array.reduce()</h1>
+      <p class="description">Demonstrates using reduce() to combine all array elements into a single accumulated value, such as a sum or maximum.</p>
+
+      <div class="demo-area">
+<pre id="reduceOutput"></pre>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to JavaScript Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>JavaScript Programs &mdash; Program 46</footer>
+<script>
+const prices = [250, 899, 120, 450, 75];
+const total = prices.reduce((sum, price) => sum + price, 0);
+const max = prices.reduce((a, b) => Math.max(a, b));
+document.getElementById('reduceOutput').textContent =
+`Prices: [${prices.join(', ')}]
+Total (reduce sum): ₹${total}
+Maximum (reduce max): ₹${max}`;
+</script>
+</body>
+</html>

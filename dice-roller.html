@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dice Roller</title>
+<link rel="stylesheet" href="../assets/style.css">
+
+</head>
+<body>
+
+  <header class="site-header"><h1>JavaScript Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>18. Dice Roller</h1>
+      <p class="description">Simulates rolling one or more six-sided dice using Math.random(), displaying results as dice-face emoji.</p>
+
+      <div class="demo-area">
+<div class="box" id="diceOutput" style="font-size:2.5rem;">🎲</div><div class="row" style="justify-content:center; margin-top:12px;"><button onclick="rollDice(1)">Roll 1 Die</button><button onclick="rollDice(2)">Roll 2 Dice</button></div>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to JavaScript Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>JavaScript Programs &mdash; Program 18</footer>
+<script>
+const diceFaces = ['⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
+function rollDice(count) {
+  let output = '';
+  for (let i = 0; i < count; i++) {
+    const roll = Math.floor(Math.random() * 6);
+    output += diceFaces[roll] + ' ';
+  }
+  document.getElementById('diceOutput').textContent = output.trim();
+}
+</script>
+</body>
+</html>

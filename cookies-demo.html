@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cookies with JavaScript</title>
+<link rel="stylesheet" href="../assets/style.css">
+
+</head>
+<body>
+
+  <header class="site-header"><h1>JavaScript Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>42. Cookies with JavaScript</h1>
+      <p class="description">Demonstrates setting, reading and deleting a browser cookie using document.cookie.</p>
+
+      <div class="demo-area">
+<input type="text" id="cookieInput" placeholder="Enter cookie value"><div class="row"><button onclick="setCookieDemo()">Set Cookie</button><button onclick="readCookieDemo()">Read Cookie</button><button onclick="deleteCookieDemo()">Delete Cookie</button></div><pre id="cookieOutput"></pre>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to JavaScript Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>JavaScript Programs &mdash; Program 42</footer>
+<script>
+function setCookieDemo() {
+  const value = document.getElementById('cookieInput').value;
+  document.cookie = `practicalCookie=${encodeURIComponent(value)}; max-age=3600; path=/`;
+  document.getElementById('cookieOutput').textContent = 'Cookie set!';
+}
+function readCookieDemo() {
+  const match = document.cookie.split('; ').find(row => row.startsWith('practicalCookie='));
+  document.getElementById('cookieOutput').textContent = match ? 'Value: ' + decodeURIComponent(match.split('=')[1]) : 'No cookie found.';
+}
+function deleteCookieDemo() {
+  document.cookie = 'practicalCookie=; max-age=0; path=/';
+  document.getElementById('cookieOutput').textContent = 'Cookie deleted.';
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DOM Traversal (Parent, Child, Sibling)</title>
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+#familyBox p { background: var(--light-blue); padding: 8px; margin: 4px 0; border-radius: 4px; cursor: pointer; }
+</style>
+</head>
+<body>
+
+  <header class="site-header"><h1>JavaScript Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>20. DOM Traversal (Parent, Child, Sibling)</h1>
+      <p class="description">Demonstrates navigating the DOM tree using parentElement, children, nextElementSibling and previousElementSibling.</p>
+
+      <div class="demo-area">
+<div id="familyBox"><p id="child1">Child 1</p><p id="child2">Child 2 (middle)</p><p id="child3">Child 3</p></div><pre id="traversalOutput">Click a paragraph to see its relatives.</pre>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to JavaScript Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>JavaScript Programs &mdash; Program 20</footer>
+<script>
+document.querySelectorAll('#familyBox p').forEach(el => {
+  el.addEventListener('click', () => {
+    const output = document.getElementById('traversalOutput');
+    const parentId = el.parentElement.id;
+    const nextSibling = el.nextElementSibling ? el.nextElementSibling.id : 'none';
+    const prevSibling = el.previousElementSibling ? el.previousElementSibling.id : 'none';
+    const childCount = el.parentElement.children.length;
+    output.textContent = `Clicked: ${el.id}\nParent: ${parentId}\nNext sibling: ${nextSibling}\nPrevious sibling: ${prevSibling}\nTotal siblings (incl. self): ${childCount}`;
+  });
+});
+</script>
+</body>
+</html>

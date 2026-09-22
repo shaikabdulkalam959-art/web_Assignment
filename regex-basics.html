@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Regular Expressions Basics</title>
+<link rel="stylesheet" href="../assets/style.css">
+
+</head>
+<body>
+
+  <header class="site-header"><h1>JavaScript Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>67. Regular Expressions Basics</h1>
+      <p class="description">Demonstrates using regular expressions with .test() and .match() to validate and extract patterns from text.</p>
+
+      <div class="demo-area">
+<input type="text" id="regexTestInput" value="Contact: shaik959@gmail.com or call 7996199470"><button onclick="runRegexDemo()">Run Regex Test</button><pre id="regexDemoOutput"></pre>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to JavaScript Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>JavaScript Programs &mdash; Program 67</footer>
+<script>
+function runRegexDemo() {
+  const text = document.getElementById('regexTestInput').value;
+  const emailPattern = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/g;
+  const phonePattern = /\d{10}/g;
+  const emails = text.match(emailPattern) || [];
+  const phones = text.match(phonePattern) || [];
+  document.getElementById('regexDemoOutput').textContent =
+`Input text: "${text}"
+Emails found: ${JSON.stringify(emails)}
+10-digit numbers found: ${JSON.stringify(phones)}
+Contains "gmail"? ${/gmail/.test(text)}`;
+}
+runRegexDemo();
+</script>
+</body>
+</html>

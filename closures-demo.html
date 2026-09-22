@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Closures Demonstration</title>
+<link rel="stylesheet" href="../assets/style.css">
+
+</head>
+<body>
+
+  <header class="site-header"><h1>JavaScript Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>58. Closures Demonstration</h1>
+      <p class="description">Demonstrates a closure: an inner function that remembers and can access variables from its outer function's scope, even after the outer function has returned.</p>
+
+      <div class="demo-area">
+<button onclick="incrementCounter()">Increment Closure Counter</button><pre id="closureOutput">Count: 0</pre>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to JavaScript Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>JavaScript Programs &mdash; Program 58</footer>
+<script>
+function createCounter() {
+  let count = 0; // this variable is "enclosed" by the inner function below
+  return function () {
+    count++;
+    return count;
+  };
+}
+const incrementCounter2 = createCounter();
+function incrementCounter() {
+  document.getElementById('closureOutput').textContent = 'Count: ' + incrementCounter2();
+}
+</script>
+</body>
+</html>

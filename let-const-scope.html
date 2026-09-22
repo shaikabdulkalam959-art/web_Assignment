@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>let/const and Block Scope</title>
+<link rel="stylesheet" href="../assets/style.css">
+
+</head>
+<body>
+
+  <header class="site-header"><h1>JavaScript Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>55. let/const and Block Scope</h1>
+      <p class="description">Demonstrates the block-scoping behaviour of let and const compared to the older function-scoped var.</p>
+
+      <div class="demo-area">
+<pre id="scopeOutput"></pre>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to JavaScript Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>JavaScript Programs &mdash; Program 55</footer>
+<script>
+let output = '';
+if (true) {
+  let blockScoped = 'I only exist inside this block';
+  const alsoBlockScoped = 'Me too';
+  output += 'Inside block: ' + blockScoped + '\n';
+}
+try {
+  // blockScoped is not accessible here - this would throw a ReferenceError
+  output += 'Outside block, blockScoped is: ' + (typeof blockScoped !== 'undefined' ? blockScoped : 'not accessible (as expected)');
+} catch (e) {
+  output += 'Accessing blockScoped outside its block threw an error, as expected.';
+}
+document.getElementById('scopeOutput').textContent = output;
+</script>
+</body>
+</html>

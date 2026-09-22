@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Array.filter()</title>
+<link rel="stylesheet" href="../assets/style.css">
+
+</head>
+<body>
+
+  <header class="site-header"><h1>JavaScript Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>45. Array.filter()</h1>
+      <p class="description">Demonstrates using filter() to build a new array containing only elements that pass a test condition.</p>
+
+      <div class="demo-area">
+<pre id="filterOutput"></pre>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to JavaScript Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>JavaScript Programs &mdash; Program 45</footer>
+<script>
+const numbers = [4, 9, 15, 22, 7, 30, 3];
+const evens = numbers.filter(n => n % 2 === 0);
+const greaterThan10 = numbers.filter(n => n > 10);
+document.getElementById('filterOutput').textContent =
+`Original: [${numbers.join(', ')}]
+Even numbers: [${evens.join(', ')}]
+Greater than 10: [${greaterThan10.join(', ')}]`;
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JSON.stringify() and JSON.parse()</title>
+<link rel="stylesheet" href="../assets/style.css">
+
+</head>
+<body>
+
+  <header class="site-header"><h1>JavaScript Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>66. JSON.stringify() and JSON.parse()</h1>
+      <p class="description">Demonstrates converting a JavaScript object to a JSON text string and back again.</p>
+
+      <div class="demo-area">
+<pre id="jsonDemoOutput"></pre>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to JavaScript Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>JavaScript Programs &mdash; Program 66</footer>
+<script>
+const data = { name: 'Shaik Abdulkalam', skills: ['C', 'C++', 'Python', 'JavaScript'], cgpa: 8.28 };
+const jsonString = JSON.stringify(data, null, 2);
+const parsedBack = JSON.parse(jsonString);
+document.getElementById('jsonDemoOutput').textContent =
+`Original object: ${JSON.stringify(data)}
+
+JSON.stringify() (pretty-printed):
+${jsonString}
+
+JSON.parse() back to object, accessing .name: ${parsedBack.name}`;
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Promise Chaining</title>
+<link rel="stylesheet" href="../assets/style.css">
+
+</head>
+<body>
+
+  <header class="site-header"><h1>JavaScript Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>64. Promise Chaining</h1>
+      <p class="description">Demonstrates chaining multiple .then() calls so each asynchronous step runs after the previous one resolves.</p>
+
+      <div class="demo-area">
+<button onclick="runChainDemo()">Run Chained Promises</button><pre id="chainOutput"></pre>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to JavaScript Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>JavaScript Programs &mdash; Program 64</footer>
+<script>
+function step(message, delayMs) {
+  return new Promise(resolve => setTimeout(() => resolve(message), delayMs));
+}
+function runChainDemo() {
+  const output = document.getElementById('chainOutput');
+  output.textContent = 'Starting chain...';
+  step('Step 1 done', 500)
+    .then(msg1 => { output.textContent = msg1; return step('Step 2 done', 500); })
+    .then(msg2 => { output.textContent += '\n' + msg2; return step('Step 3 done', 500); })
+    .then(msg3 => { output.textContent += '\n' + msg3 + '\nChain complete!'; });
+}
+</script>
+</body>
+</html>

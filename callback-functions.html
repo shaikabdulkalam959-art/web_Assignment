@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Callback Functions</title>
+<link rel="stylesheet" href="../assets/style.css">
+
+</head>
+<body>
+
+  <header class="site-header"><h1>JavaScript Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>60. Callback Functions</h1>
+      <p class="description">Demonstrates passing a function as a callback to be executed after another function (including an asynchronous one) completes.</p>
+
+      <div class="demo-area">
+<button onclick="runCallbackDemo()">Run Async Task with Callback</button><pre id="callbackOutput"></pre>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to JavaScript Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>JavaScript Programs &mdash; Program 60</footer>
+<script>
+function fetchDataSimulated(callback) {
+  document.getElementById('callbackOutput').textContent = 'Fetching data...';
+  setTimeout(() => {
+    const data = { id: 1, message: 'Data loaded successfully!' };
+    callback(data); // calling back once the "async" work is done
+  }, 1500);
+}
+function runCallbackDemo() {
+  fetchDataSimulated(function (result) {
+    document.getElementById('callbackOutput').textContent = 'Callback received: ' + JSON.stringify(result);
+  });
+}
+</script>
+</body>
+</html>

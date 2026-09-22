@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>String Manipulation Methods</title>
+<link rel="stylesheet" href="../assets/style.css">
+
+</head>
+<body>
+
+  <header class="site-header"><h1>JavaScript Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>49. String Manipulation Methods</h1>
+      <p class="description">Demonstrates common string methods: toUpperCase, toLowerCase, slice, trim, replace and split.</p>
+
+      <div class="demo-area">
+<input type="text" id="strInput" value="  Hello World from JavaScript  "><button onclick="runStringMethods()">Run String Methods</button><pre id="strOutput"></pre>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to JavaScript Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>JavaScript Programs &mdash; Program 49</footer>
+<script>
+function runStringMethods() {
+  const text = document.getElementById('strInput').value;
+  document.getElementById('strOutput').textContent =
+`Original: "${text}"
+toUpperCase(): "${text.toUpperCase()}"
+toLowerCase(): "${text.toLowerCase()}"
+trim(): "${text.trim()}"
+slice(0, 5): "${text.slice(0, 5)}"
+replace("World", "JS"): "${text.replace('World', 'JS')}"
+split(" "): ${JSON.stringify(text.trim().split(' '))}
+length: ${text.length}`;
+}
+runStringMethods();
+</script>
+</body>
+</html>

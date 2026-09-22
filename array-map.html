@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Array.map()</title>
+<link rel="stylesheet" href="../assets/style.css">
+
+</head>
+<body>
+
+  <header class="site-header"><h1>JavaScript Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>44. Array.map()</h1>
+      <p class="description">Demonstrates using map() to transform every element of an array into a new array.</p>
+
+      <div class="demo-area">
+<pre id="mapOutput"></pre>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to JavaScript Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>JavaScript Programs &mdash; Program 44</footer>
+<script>
+const numbers = [1, 2, 3, 4, 5];
+const doubled = numbers.map(n => n * 2);
+document.getElementById('mapOutput').textContent =
+`Original: [${numbers.join(', ')}]
+After .map(n => n * 2): [${doubled.join(', ')}]`;
+</script>
+</body>
+</html>

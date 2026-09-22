@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rock Paper Scissors Game</title>
+<link rel="stylesheet" href="../assets/style.css">
+
+</head>
+<body>
+
+  <header class="site-header"><h1>JavaScript Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>8. Rock Paper Scissors Game</h1>
+      <p class="description">A classic Rock-Paper-Scissors game against the computer, demonstrating conditional logic and random choice generation.</p>
+
+      <div class="demo-area">
+<div class="row" style="justify-content:center;"><button onclick="play('rock')">🪨 Rock</button><button onclick="play('paper')">📄 Paper</button><button onclick="play('scissors')">✂️ Scissors</button></div><div class="box" id="rpsResult" style="margin-top:14px;">Choose your move!</div>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to JavaScript Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>JavaScript Programs &mdash; Program 08</footer>
+<script>
+function play(playerChoice) {
+  const choices = ['rock', 'paper', 'scissors'];
+  const computerChoice = choices[Math.floor(Math.random() * 3)];
+  let result;
+  if (playerChoice === computerChoice) {
+    result = `Both chose ${playerChoice}. It's a tie!`;
+  } else if (
+    (playerChoice === 'rock' && computerChoice === 'scissors') ||
+    (playerChoice === 'paper' && computerChoice === 'rock') ||
+    (playerChoice === 'scissors' && computerChoice === 'paper')
+  ) {
+    result = `You chose ${playerChoice}, computer chose ${computerChoice}. You win!`;
+  } else {
+    result = `You chose ${playerChoice}, computer chose ${computerChoice}. Computer wins!`;
+  }
+  document.getElementById('rpsResult').textContent = result;
+}
+</script>
+</body>
+</html>

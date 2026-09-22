@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Array.forEach() and .sort()</title>
+<link rel="stylesheet" href="../assets/style.css">
+
+</head>
+<body>
+
+  <header class="site-header"><h1>JavaScript Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>47. Array.forEach() and .sort()</h1>
+      <p class="description">Demonstrates iterating with forEach() and reordering elements with sort(), including a numeric comparator.</p>
+
+      <div class="demo-area">
+<pre id="forEachOutput"></pre>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to JavaScript Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>JavaScript Programs &mdash; Program 47</footer>
+<script>
+const fruits = ['banana', 'apple', 'mango', 'cherry'];
+let listing = '';
+fruits.forEach((fruit, index) => { listing += `${index + 1}. ${fruit}\n`; });
+
+const numbers = [40, 5, 100, 25, 1];
+const sortedAsc = [...numbers].sort((a, b) => a - b);
+const sortedDesc = [...numbers].sort((a, b) => b - a);
+
+document.getElementById('forEachOutput').textContent =
+`forEach listing:\n${listing}
+Numbers: [${numbers.join(', ')}]
+Sorted ascending: [${sortedAsc.join(', ')}]
+Sorted descending: [${sortedDesc.join(', ')}]`;
+</script>
+</body>
+</html>

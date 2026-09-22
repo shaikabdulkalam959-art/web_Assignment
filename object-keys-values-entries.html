@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Object.keys(), values() and entries()</title>
+<link rel="stylesheet" href="../assets/style.css">
+
+</head>
+<body>
+
+  <header class="site-header"><h1>JavaScript Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>50. Object.keys(), values() and entries()</h1>
+      <p class="description">Demonstrates extracting an object's property names, values, and key-value pairs.</p>
+
+      <div class="demo-area">
+<pre id="objOutput"></pre>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to JavaScript Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>JavaScript Programs &mdash; Program 50</footer>
+<script>
+const student = { name: 'Shaik Abdulkalam', course: 'CSE AI/ML', cgpa: 8.28 };
+document.getElementById('objOutput').textContent =
+`Object: ${JSON.stringify(student)}
+Object.keys(): ${JSON.stringify(Object.keys(student))}
+Object.values(): ${JSON.stringify(Object.values(student))}
+Object.entries(): ${JSON.stringify(Object.entries(student))}`;
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Array.find(), findIndex() and includes()</title>
+<link rel="stylesheet" href="../assets/style.css">
+
+</head>
+<body>
+
+  <header class="site-header"><h1>JavaScript Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>48. Array.find(), findIndex() and includes()</h1>
+      <p class="description">Demonstrates searching arrays: find() returns the first matching element, findIndex() its index, includes() a true/false check.</p>
+
+      <div class="demo-area">
+<pre id="findOutput"></pre>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to JavaScript Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>JavaScript Programs &mdash; Program 48</footer>
+<script>
+const users = [
+  { id: 1, name: 'Shaik' },
+  { id: 2, name: 'Priya' },
+  { id: 3, name: 'Rahul' }
+];
+const found = users.find(u => u.id === 2);
+const index = users.findIndex(u => u.id === 3);
+const numbers = [10, 20, 30, 40];
+const hasThirty = numbers.includes(30);
+const hasNinety = numbers.includes(90);
+document.getElementById('findOutput').textContent =
+`.find(id === 2): ${JSON.stringify(found)}
+.findIndex(id === 3): ${index}
+[10,20,30,40].includes(30): ${hasThirty}
+[10,20,30,40].includes(90): ${hasNinety}`;
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tip Calculator</title>
+<link rel="stylesheet" href="../assets/style.css">
+
+</head>
+<body>
+
+  <header class="site-header"><h1>JavaScript Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>14. Tip Calculator</h1>
+      <p class="description">Calculates the tip amount and total bill based on the bill amount, tip percentage and number of people splitting it.</p>
+
+      <div class="demo-area">
+<div class="demo-form"><label for="billAmount">Bill Amount (₹)</label><input type="number" id="billAmount" value="1000"><label for="tipPercent">Tip Percentage (%)</label><input type="number" id="tipPercent" value="10"><label for="peopleCount">Number of People</label><input type="number" id="peopleCount" value="1" min="1"><button onclick="calculateTip()">Calculate</button></div><pre id="tipResult"></pre>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to JavaScript Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>JavaScript Programs &mdash; Program 14</footer>
+<script>
+function calculateTip() {
+  const bill = parseFloat(document.getElementById('billAmount').value) || 0;
+  const percent = parseFloat(document.getElementById('tipPercent').value) || 0;
+  const people = parseInt(document.getElementById('peopleCount').value, 10) || 1;
+  const tipAmount = bill * (percent / 100);
+  const total = bill + tipAmount;
+  const perPerson = total / people;
+  document.getElementById('tipResult').textContent =
+`Tip Amount: ₹${tipAmount.toFixed(2)}
+Total Bill: ₹${total.toFixed(2)}
+Amount per person: ₹${perPerson.toFixed(2)}`;
+}
+</script>
+</body>
+</html>

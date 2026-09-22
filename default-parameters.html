@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Default Function Parameters</title>
+<link rel="stylesheet" href="../assets/style.css">
+
+</head>
+<body>
+
+  <header class="site-header"><h1>JavaScript Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>56. Default Function Parameters</h1>
+      <p class="description">Demonstrates giving function parameters default values that are used when no argument (or undefined) is passed.</p>
+
+      <div class="demo-area">
+<pre id="defaultParamOutput"></pre>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to JavaScript Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>JavaScript Programs &mdash; Program 56</footer>
+<script>
+function greet(name = 'Guest', greeting = 'Hello') {
+  return `${greeting}, ${name}!`;
+}
+document.getElementById('defaultParamOutput').textContent =
+`greet(): ${greet()}
+greet("Shaik"): ${greet('Shaik')}
+greet("Shaik", "Welcome"): ${greet('Shaik', 'Welcome')}`;
+</script>
+</body>
+</html>

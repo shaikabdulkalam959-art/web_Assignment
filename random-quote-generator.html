@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Quote Generator</title>
+<link rel="stylesheet" href="../assets/style.css">
+
+</head>
+<body>
+
+  <header class="site-header"><h1>JavaScript Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>6. Random Quote Generator</h1>
+      <p class="description">Displays a random quote from an array each time the button is clicked, demonstrating array indexing with Math.random().</p>
+
+      <div class="demo-area">
+<div class="box" id="quoteBox">Click the button for an inspiring quote.</div><div class="row" style="justify-content:center; margin-top:14px;"><button onclick="showRandomQuote()">New Quote</button></div>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to JavaScript Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>JavaScript Programs &mdash; Program 06</footer>
+<script>
+const quotes = [
+  "The only way to do great work is to love what you do.",
+  "Code is like humor. When you have to explain it, it's bad.",
+  "First, solve the problem. Then, write the code.",
+  "Simplicity is the soul of efficiency.",
+  "Experience is the name everyone gives to their mistakes.",
+  "Programs must be written for people to read.",
+  "Talk is cheap. Show me the code."
+];
+function showRandomQuote() {
+  const index = Math.floor(Math.random() * quotes.length);
+  document.getElementById('quoteBox').textContent = quotes[index];
+}
+</script>
+</body>
+</html>
