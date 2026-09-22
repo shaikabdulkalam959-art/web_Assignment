@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Images and Multimedia (Audio/Video)</title>
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+.demo-area img { max-width: 100%; border-radius: 8px; }
+figure { margin: 0; text-align: center; }
+figcaption { color: var(--muted); font-size: 0.9rem; margin-top: 6px; }
+</style>
+</head>
+<body>
+
+  <header class="site-header"><h1>HTML Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>6. Images and Multimedia (Audio/Video)</h1>
+      <p class="description">Demonstrates the img, figure, audio and video tags.</p>
+
+      <div class="demo-area">
+<figure>
+  <img src="bmw.jpg.jpg" alt="Sample placeholder graphic"
+       onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+  <p style="display:none; color:var(--muted);">(Add an image at assets/images/sample-placeholder.svg to see it rendered here.)</p>
+  <figcaption>Fig 1. Example image with a caption using figcaption</figcaption>
+</figure>
+<h3>Audio Element</h3>
+<audio controls><source src="ad.mp3" type="audio/mpeg">Add a file at assets/audio-sample.mp3 to test.</audio>
+<h3>Video Element</h3>
+<video width="100%" controls><source src="video.mp4" type="video/mp4">Add a file at assets/video-sample.mp4 to test.</video>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to HTML Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>HTML Programs &mdash; Program 06</footer>
+
+</body>
+</html>

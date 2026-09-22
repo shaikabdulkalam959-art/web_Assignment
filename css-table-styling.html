@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Table Styling (Borders &amp; Striping)</title>
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+.styled-table { width: 100%; border-collapse: collapse; } .styled-table th, .styled-table td { padding: 10px; border: 1px solid var(--border); text-align: left; } .styled-table thead { background: var(--navy); color: #fff; } .styled-table tbody tr:nth-child(even) { background: var(--light-blue); } .styled-table tbody tr:hover { background: #ffe8cc; }
+</style>
+</head>
+<body>
+
+  <header class="site-header"><h1>CSS Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>25. Table Styling (Borders &amp; Striping)</h1>
+      <p class="description">Demonstrates styling an HTML table with borders, zebra striping, header colors and hover highlighting.</p>
+
+      <div class="demo-area">
+<table class="styled-table"><thead><tr><th>Subject</th><th>Marks</th></tr></thead><tbody><tr><td>DSA</td><td>92</td></tr><tr><td>DAA</td><td>88</td></tr><tr><td>Web Tech</td><td>95</td></tr><tr><td>Power BI</td><td>90</td></tr></tbody></table>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to CSS Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>CSS Programs &mdash; Program 25</footer>
+
+</body>
+</html>

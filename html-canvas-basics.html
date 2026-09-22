@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML5 Canvas Basics</title>
+<link rel="stylesheet" href="../assets/style.css">
+
+</head>
+<body>
+
+  <header class="site-header"><h1>HTML Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>13. HTML5 Canvas Basics</h1>
+      <p class="description">Demonstrates drawing simple shapes on an HTML5 canvas using JavaScript's 2D drawing context.</p>
+
+      <div class="demo-area">
+<canvas id="myCanvas" width="400" height="200" style="border:1px solid var(--border); border-radius:8px; max-width:100%;"></canvas>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to HTML Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>HTML Programs &mdash; Program 13</footer>
+<script>
+const ctx = document.getElementById('myCanvas').getContext('2d');
+ctx.fillStyle = '#2e5aac';
+ctx.fillRect(20, 20, 100, 70);        // rectangle
+ctx.beginPath();
+ctx.arc(220, 55, 40, 0, Math.PI * 2); // circle
+ctx.fillStyle = '#ff7a45';
+ctx.fill();
+ctx.strokeStyle = '#1f3864';
+ctx.lineWidth = 3;
+ctx.beginPath();
+ctx.moveTo(300, 20);
+ctx.lineTo(360, 100);
+ctx.lineTo(300, 150);
+ctx.closePath();
+ctx.stroke();                          // triangle outline
+ctx.fillStyle = '#1f3864';
+ctx.font = '16px Arial';
+ctx.fillText('Canvas Drawing Demo', 20, 180);
+</script>
+</body>
+</html>

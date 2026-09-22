@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Margin Collapsing</title>
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+.m-box { background: var(--light-blue); padding: 10px; border-radius: 6px; } .m-box:first-child { margin-bottom: 40px; } .m-box:last-child { margin-top: 30px; }
+</style>
+</head>
+<body>
+
+  <header class="site-header"><h1>CSS Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>8. Margin Collapsing</h1>
+      <p class="description">Demonstrates how vertical margins between adjacent block elements collapse into a single margin instead of adding together.</p>
+
+      <div class="demo-area">
+<div class="m-box">Box A (margin-bottom: 40px)</div><div class="m-box">Box B (margin-top: 30px)</div><p style="margin-top:10px; color:var(--muted);">Gap between A and B is 40px (the larger margin), not 70px.</p>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to CSS Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>CSS Programs &mdash; Program 08</footer>
+
+</body>
+</html>

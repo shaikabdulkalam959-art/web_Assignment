@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User-select &amp; Pointer-events</title>
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+.no-select { user-select: none; background: var(--light-blue); padding: 10px; border-radius: 6px; } .disabled-btn { pointer-events: none; opacity: 0.5; }
+</style>
+</head>
+<body>
+
+  <header class="site-header"><h1>CSS Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>71. User-select &amp; Pointer-events</h1>
+      <p class="description">Demonstrates disabling text selection with user-select:none and ignoring clicks with pointer-events:none.</p>
+
+      <div class="demo-area">
+<p class="no-select">Try to select this text - you can't, because user-select is none.</p><button class="disabled-btn" onclick="alert('This should never fire')">pointer-events: none (unclickable)</button>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to CSS Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>CSS Programs &mdash; Program 71</footer>
+
+</body>
+</html>

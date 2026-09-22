@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flexbox: Container Basics (direction &amp; wrap)</title>
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+.flex-row, .flex-col, .flex-wrap-demo { display: flex; gap: 8px; background: var(--light-blue); padding: 10px; border-radius: 8px; margin-bottom: 14px; } .flex-col { flex-direction: column; } .flex-wrap-demo { flex-wrap: wrap; width: 220px; } .flex-row > div, .flex-col > div, .flex-wrap-demo > div { background: var(--blue); color: #fff; padding: 10px 14px; border-radius: 6px; }
+</style>
+</head>
+<body>
+
+  <header class="site-header"><h1>CSS Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>36. Flexbox: Container Basics (direction &amp; wrap)</h1>
+      <p class="description">Demonstrates flex-direction (row/column) and flex-wrap on a flex container.</p>
+
+      <div class="demo-area">
+<h4>flex-direction: row</h4><div class="flex-row">1</div><h4>flex-direction: column</h4><div class="flex-col">1</div><h4>flex-wrap: wrap</h4><div class="flex-wrap-demo">
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to CSS Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>CSS Programs &mdash; Program 36</footer>
+
+</body>
+</html>

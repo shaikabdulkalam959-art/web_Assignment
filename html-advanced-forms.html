@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced Forms (fieldset, datalist, output)</title>
+<link rel="stylesheet" href="../assets/style.css">
+
+</head>
+<body>
+
+  <header class="site-header"><h1>HTML Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>14. Advanced Forms (fieldset, datalist, output)</h1>
+      <p class="description">Demonstrates grouping fields with fieldset/legend, suggestions with datalist, and live output with the output element.</p>
+
+      <div class="demo-area">
+<form class="demo-form" oninput="total.value = parseInt(qty.value||0) * parseInt(price.value||0)">
+  <fieldset style="border:1px solid var(--border); border-radius:8px; padding:14px;">
+    <legend>Order Details</legend>
+
+    <label for="city">City (with suggestions)</label>
+    <input list="cityList" id="city" name="city" placeholder="Start typing...">
+    <datalist id="cityList">
+      <option value="Chennai"><option value="Rayachoti"><option value="Bengaluru"><option value="Hyderabad">
+    </datalist>
+
+    <label for="qty2">Quantity</label>
+    <input type="number" id="qty" value="1" min="1">
+
+    <label for="price">Price per item (₹)</label>
+    <input type="number" id="price" value="100" min="0">
+
+    <label>Total</label>
+    <output name="total" id="total" style="display:block; font-weight:700; color:var(--accent); margin-top:6px;">100</output>
+  </fieldset>
+</form>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to HTML Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>HTML Programs &mdash; Program 14</footer>
+
+</body>
+</html>

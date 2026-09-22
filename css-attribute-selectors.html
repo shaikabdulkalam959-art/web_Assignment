@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Attribute Selectors</title>
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+input[type="text"] { border: 2px solid var(--blue); } input[type="email"] { border: 2px solid var(--accent); } a[target="_blank"] { color: #1e8449; font-weight: 700; }
+</style>
+</head>
+<body>
+
+  <header class="site-header"><h1>CSS Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>4. Attribute Selectors</h1>
+      <p class="description">Demonstrates selecting elements based on the presence or value of an HTML attribute.</p>
+
+      <div class="demo-area">
+<input type="text" placeholder="type input"><br><br><input type="email" placeholder="email input"><br><br><a href="https://example.com" target="_blank">External link</a>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to CSS Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>CSS Programs &mdash; Program 04</footer>
+
+</body>
+</html>

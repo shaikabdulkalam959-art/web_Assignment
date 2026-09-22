@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grid: justify-items &amp; align-items</title>
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+.align-grid { display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(2, 90px); gap: 8px; justify-items: center; align-items: center; background: var(--light-blue); padding: 10px; border-radius: 8px; } .align-grid > div { background: var(--blue); color: #fff; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 50%; }
+</style>
+</head>
+<body>
+
+  <header class="site-header"><h1>CSS Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>45. Grid: justify-items &amp; align-items</h1>
+      <p class="description">Demonstrates aligning grid item content within their cells using justify-items and align-items.</p>
+
+      <div class="demo-area">
+<div class="align-grid"><div>A</div><div>B</div><div>C</div><div>D</div></div>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to CSS Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>CSS Programs &mdash; Program 45</footer>
+
+</body>
+</html>

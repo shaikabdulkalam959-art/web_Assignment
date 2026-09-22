@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clearfix Technique</title>
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+.f1, .f2 { float: left; width: 100px; height: 60px; background: var(--blue); color: #fff; margin-right: 10px; display:flex; align-items:center; justify-content:center; border-radius:6px; } .container-nofix, .container-fixed { border: 2px dashed var(--accent); margin-bottom: 10px; } .clearfix::after { content: ""; display: table; clear: both; }
+</style>
+</head>
+<body>
+
+  <header class="site-header"><h1>CSS Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>27. Clearfix Technique</h1>
+      <p class="description">Demonstrates the classic clearfix hack that forces a parent to contain floated children.</p>
+
+      <div class="demo-area">
+<div class="container-nofix"><div class="f1">Float 1</div><div class="f2">Float 2</div></div><p style="color:var(--muted);">Without clearfix, the dashed container above collapses to zero height.</p><div class="container-fixed clearfix"><div class="f1">Float 1</div><div class="f2">Float 2</div></div><p style="color:var(--muted);">With clearfix applied, the container correctly wraps its floated children.</p>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to CSS Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>CSS Programs &mdash; Program 27</footer>
+
+</body>
+</html>

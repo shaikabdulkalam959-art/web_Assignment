@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Position: Fixed</title>
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+.fixed-demo-container { position: relative; height: 160px; overflow-y: auto; border: 1px solid var(--border); border-radius: 8px; } .fixed-badge { position: sticky; top: 0; background: var(--navy); color: #fff; padding: 8px; z-index: 2; } .filler { padding: 12px; } p.description + .demo-area .fixed-badge { position: sticky; }
+</style>
+</head>
+<body>
+
+  <header class="site-header"><h1>CSS Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>32. Position: Fixed</h1>
+      <p class="description">Demonstrates a fixed-position element that stays in place within its scrollable area even while scrolling.</p>
+
+      <div class="demo-area">
+<div class="fixed-demo-container"><div class="fixed-badge">Fixed inside this box</div><div class="filler">Scroll down inside this box...</div><div class="filler">Line 2</div><div class="filler">Line 3</div><div class="filler">Line 4</div><div class="filler">Line 5</div><div class="filler">Line 6</div></div>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to CSS Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>CSS Programs &mdash; Program 32</footer>
+
+</body>
+</html>

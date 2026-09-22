@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flexbox: justify-content</title>
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+.jc { display: flex; background: var(--light-blue); padding: 10px; border-radius: 8px; margin-bottom: 10px; } .jc-start { justify-content: flex-start; } .jc-center { justify-content: center; } .jc-between { justify-content: space-between; } .jc-around { justify-content: space-around; } .jc > div { background: var(--blue); color: #fff; padding: 10px 16px; border-radius: 6px; }
+</style>
+</head>
+<body>
+
+  <header class="site-header"><h1>CSS Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>37. Flexbox: justify-content</h1>
+      <p class="description">Demonstrates flex-start, center, space-between, space-around and space-evenly values of justify-content.</p>
+
+      <div class="demo-area">
+<h4>flex-start</h4><div class="jc jc-start"><div>1</div><div>2</div></div><h4>center</h4><div class="jc jc-center"><div>1</div><div>2</div></div><h4>space-between</h4><div class="jc jc-between"><div>1</div><div>2</div></div><h4>space-around</h4><div class="jc jc-around"><div>1</div><div>2</div></div>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to CSS Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>CSS Programs &mdash; Program 37</footer>
+
+</body>
+</html>

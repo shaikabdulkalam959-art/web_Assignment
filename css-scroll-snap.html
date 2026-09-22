@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scroll-snap</title>
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+.snap-container { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 10px; padding-bottom: 10px; } .snap-item { flex: 0 0 80%; scroll-snap-align: center; height: 100px; background: var(--blue); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 2rem; border-radius: 8px; }
+</style>
+</head>
+<body>
+
+  <header class="site-header"><h1>CSS Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>73. Scroll-snap</h1>
+      <p class="description">Demonstrates horizontal scroll-snapping so each panel aligns neatly when scrolling, useful for image carousels.</p>
+
+      <div class="demo-area">
+<div class="snap-container"><div class="snap-item">1</div><div class="snap-item">2</div><div class="snap-item">3</div><div class="snap-item">4</div></div>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to CSS Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>CSS Programs &mdash; Program 73</footer>
+
+</body>
+</html>

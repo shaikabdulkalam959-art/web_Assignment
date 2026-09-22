@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Backdrop-filter (Glassmorphism)</title>
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+.glass-bg { height: 160px; border-radius: 10px; background: linear-gradient(135deg, #ff7a45, #2e5aac, #1e8449); display: flex; align-items: center; justify-content: center; } .glass-card { background: rgba(255,255,255,0.25); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.4); border-radius: 10px; padding: 20px 30px; color: #fff; font-weight: 700; }
+</style>
+</head>
+<body>
+
+  <header class="site-header"><h1>CSS Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>66. Backdrop-filter (Glassmorphism)</h1>
+      <p class="description">Demonstrates the frosted-glass glassmorphism effect using backdrop-filter: blur() over a colorful background.</p>
+
+      <div class="demo-area">
+<div class="glass-bg"><div class="glass-card">Glassmorphism Card</div></div>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to CSS Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>CSS Programs &mdash; Program 66</footer>
+
+</body>
+</html>

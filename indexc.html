@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Programs</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>CSS Programs</h1>
+    <p>75 practical programs</p>
+  </header>
+
+  <main>
+    <input type="text" class="search-box" id="searchBox" placeholder="Search programs by name..." onkeyup="filterPrograms()">
+    <ol class="program-list">
+      <li><a href="css-universal-element-selectors.html">Universal &amp; Element Selectors</a></li>
+      <li><a href="css-class-id-selectors.html">Class &amp; ID Selectors</a></li>
+      <li><a href="css-combinators.html">Grouping &amp; Combinator Selectors</a></li>
+      <li><a href="css-attribute-selectors.html">Attribute Selectors</a></li>
+      <li><a href="css-pseudo-classes.html">Pseudo-class Selectors</a></li>
+      <li><a href="css-pseudo-elements.html">Pseudo-element Selectors</a></li>
+      <li><a href="css-box-model.html">Box Model Visualizer</a></li>
+      <li><a href="css-margin-collapsing.html">Margin Collapsing</a></li>
+      <li><a href="css-border-styles.html">Border Styles</a></li>
+      <li><a href="css-border-radius-shapes.html">Border-radius Shapes</a></li>
+      <li><a href="css-box-shadow.html">Box Shadow</a></li>
+      <li><a href="css-linear-gradients.html">Background Linear Gradients</a></li>
+      <li><a href="css-radial-gradients.html">Background Radial Gradients</a></li>
+      <li><a href="css-background-images-position.html">Background Images &amp; Positioning</a></li>
+      <li><a href="css-multiple-backgrounds.html">Multiple Backgrounds</a></li>
+      <li><a href="css-text-background-clip.html">Text Color &amp; Background-clip Text</a></li>
+      <li><a href="css-font-family-fallback.html">Typography: Font-family &amp; Fallback Stacks</a></li>
+      <li><a href="css-font-size-units.html">Typography: Font-size Units (px, em, rem, %)</a></li>
+      <li><a href="css-text-align-decoration.html">Text-align &amp; Text-decoration</a></li>
+      <li><a href="css-text-transform-spacing.html">Text-transform &amp; Letter-spacing</a></li>
+      <li><a href="css-line-height-word-spacing.html">Line-height &amp; Word-spacing</a></li>
+      <li><a href="css-text-shadow.html">Text Shadow</a></li>
+      <li><a href="css-web-fonts.html">Using Web Fonts (Google Fonts)</a></li>
+      <li><a href="css-list-style-customization.html">List-style Customization</a></li>
+      <li><a href="css-table-styling.html">Table Styling (Borders &amp; Striping)</a></li>
+      <li><a href="css-float-layout.html">Float Layout</a></li>
+      <li><a href="css-clearfix.html">Clearfix Technique</a></li>
+      <li><a href="css-display-property.html">Display Property (block, inline, inline-block, none)</a></li>
+      <li><a href="css-visibility-vs-display.html">Visibility vs Display</a></li>
+      <li><a href="css-position-static-relative.html">Position: Static &amp; Relative</a></li>
+      <li><a href="css-position-absolute.html">Position: Absolute</a></li>
+      <li><a href="css-position-fixed.html">Position: Fixed</a></li>
+      <li><a href="css-position-sticky.html">Position: Sticky</a></li>
+      <li><a href="css-zindex-stacking.html">Z-index &amp; Stacking Context</a></li>
+      <li><a href="css-overflow-property.html">Overflow Property</a></li>
+      <li><a href="css-flex-container-basics.html">Flexbox: Container Basics (direction &amp; wrap)</a></li>
+      <li><a href="css-flex-justify-content.html">Flexbox: justify-content</a></li>
+      <li><a href="css-flex-align-items.html">Flexbox: align-items &amp; align-content</a></li>
+      <li><a href="css-flex-grow-shrink-basis.html">Flexbox: flex-grow, flex-shrink, flex-basis</a></li>
+      <li><a href="css-flex-order.html">Flexbox: order Property</a></li>
+      <li><a href="css-grid-template-columns-rows.html">Grid: Template Columns &amp; Rows</a></li>
+      <li><a href="css-grid-gap.html">Grid: Gap Property</a></li>
+      <li><a href="css-grid-template-areas.html">Grid: Named Template Areas</a></li>
+      <li><a href="css-grid-auto-fit-fill.html">Grid: Responsive auto-fit/auto-fill</a></li>
+      <li><a href="css-grid-alignment.html">Grid: justify-items &amp; align-items</a></li>
+      <li><a href="css-variables-custom-properties.html">CSS Custom Properties (Variables)</a></li>
+      <li><a href="css-calc-function.html">The calc() Function</a></li>
+      <li><a href="css-min-max-clamp.html">min(), max() and clamp() Functions</a></li>
+      <li><a href="css-responsive-photo-grid.html">Practical Project: Responsive Photo Grid Card Layout</a></li>
+      <li><a href="css-grid-implicit-explicit.html">Grid: Implicit vs Explicit Tracks</a></li>
+      <li><a href="css-transitions-basics.html">Transitions Basics</a></li>
+      <li><a href="css-transition-timing-functions.html">Transition Timing Functions</a></li>
+      <li><a href="css-transform-translate.html">Transform: translate</a></li>
+      <li><a href="css-transform-rotate.html">Transform: rotate</a></li>
+      <li><a href="css-transform-scale.html">Transform: scale</a></li>
+      <li><a href="css-transform-skew.html">Transform: skew</a></li>
+      <li><a href="css-transform-3d.html">3D Transforms (perspective &amp; rotateY)</a></li>
+      <li><a href="css-keyframe-loading-spinner.html">Keyframe Animation: Loading Spinner</a></li>
+      <li><a href="css-keyframe-fade.html">Keyframe Animation: Fade In/Out</a></li>
+      <li><a href="css-keyframe-slide.html">Keyframe Animation: Sliding</a></li>
+      <li><a href="css-media-query-breakpoints.html">Media Queries: Responsive Breakpoints</a></li>
+      <li><a href="css-mobile-first-design.html">Mobile-first Responsive Design</a></li>
+      <li><a href="css-aspect-ratio.html">Aspect-ratio Property</a></li>
+      <li><a href="css-object-fit.html">Object-fit for Images</a></li>
+      <li><a href="css-filters.html">CSS Filters (blur, brightness, grayscale)</a></li>
+      <li><a href="css-backdrop-filter.html">Backdrop-filter (Glassmorphism)</a></li>
+      <li><a href="css-mix-blend-mode.html">Mix-blend-mode</a></li>
+      <li><a href="css-clip-path-shapes.html">Clip-path Shapes</a></li>
+      <li><a href="css-shapes-basic.html">Basic CSS Shapes</a></li>
+      <li><a href="css-cursor-styles.html">Cursor Styles</a></li>
+      <li><a href="css-user-select-pointer-events.html">User-select &amp; Pointer-events</a></li>
+      <li><a href="css-custom-scrollbar.html">Custom Scrollbar Styling</a></li>
+      <li><a href="css-scroll-snap.html">Scroll-snap</a></li>
+      <li><a href="css-counters.html">CSS Counters</a></li>
+      <li><a href="css-print-stylesheet.html">Print Stylesheet (@media print)</a></li>
+    </ol>
+
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+    </div>
+  </main>
+
+  <footer>CSS Programs Section</footer>
+
+<script>
+  function filterPrograms() {
+    const query = document.getElementById('searchBox').value.toLowerCase();
+    document.querySelectorAll('.program-list li').forEach(li => {
+      const text = li.textContent.toLowerCase();
+      li.style.display = text.includes(query) ? '' : 'none';
+    });
+  }
+</script>
+</body>
+</html>

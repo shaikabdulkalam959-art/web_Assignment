@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Counters</title>
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+.counter-demo { counter-reset: chapter; } .counter-demo h4 { counter-increment: chapter; background: var(--light-blue); padding: 8px 12px; border-radius: 6px; margin-bottom: 6px; } .counter-demo h4::before { content: "Chapter " counter(chapter) ": "; color: var(--accent); font-weight: 700; }
+</style>
+</head>
+<body>
+
+  <header class="site-header"><h1>CSS Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>74. CSS Counters</h1>
+      <p class="description">Demonstrates automatic numbering of nested sections using counter-reset and counter-increment.</p>
+
+      <div class="demo-area">
+<div class="counter-demo"><h4>Chapter</h4><h4>Chapter</h4><h4>Chapter</h4></div>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to CSS Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>CSS Programs &mdash; Program 74</footer>
+
+</body>
+</html>

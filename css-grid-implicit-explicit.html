@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grid: Implicit vs Explicit Tracks</title>
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+.implicit-grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 60px; gap: 8px; } .implicit-grid > div { background: var(--blue); color: #fff; display: flex; align-items: center; justify-content: center; border-radius: 6px; }
+</style>
+</head>
+<body>
+
+  <header class="site-header"><h1>CSS Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>50. Grid: Implicit vs Explicit Tracks</h1>
+      <p class="description">Demonstrates the difference between explicitly defined grid tracks and implicit tracks auto-generated with grid-auto-rows.</p>
+
+      <div class="demo-area">
+<div class="implicit-grid"><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div></div><p style="color:var(--muted); margin-top:10px;">Only 3 columns were explicitly defined; extra items wrap to new implicit rows sized by grid-auto-rows.</p>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to CSS Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>CSS Programs &mdash; Program 50</footer>
+
+</body>
+</html>

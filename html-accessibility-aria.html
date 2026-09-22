@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accessibility Basics (ARIA &amp; alt text)</title>
+<link rel="stylesheet" href="../assets/style.css">
+
+</head>
+<body>
+
+  <header class="site-header"><h1>HTML Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>15. Accessibility Basics (ARIA &amp; alt text)</h1>
+      <p class="description">Demonstrates accessibility best practices: descriptive alt text, form labels, and ARIA attributes for assistive technologies.</p>
+
+      <div class="demo-area">
+<p>Good accessibility practice - every input has an associated, explicit label:</p>
+<div class="demo-form">
+  <label for="a11yName">Name</label>
+  <input type="text" id="a11yName" aria-required="true">
+</div>
+
+<p style="margin-top:16px;">A progress indicator with ARIA attributes for screen readers:</p>
+<div role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
+     style="background:var(--light-blue); border-radius:8px; overflow:hidden; height:22px;">
+  <div style="background:var(--blue); width:70%; height:100%; color:#fff; text-align:center; font-size:0.8rem; line-height:22px;">70%</div>
+</div>
+
+<p style="margin-top:16px;">An icon-only button made accessible with aria-label:</p>
+<button aria-label="Close dialog" onclick="alert('This button is announced as \'Close dialog\' by screen readers')">&times;</button>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to HTML Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>HTML Programs &mdash; Program 15</footer>
+
+</body>
+</html>

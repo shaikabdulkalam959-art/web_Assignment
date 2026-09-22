@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Print Stylesheet (@media print)</title>
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+@media print { .no-print { display: none !important; } body { background: #fff; } }
+</style>
+</head>
+<body>
+
+  <header class="site-header"><h1>CSS Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>75. Print Stylesheet (@media print)</h1>
+      <p class="description">Explains how @media print lets you define styles that only apply when a page is printed, such as hiding navigation.</p>
+
+      <div class="demo-area">
+<div class="print-demo"><nav class="no-print" style="background:var(--navy); color:#fff; padding:8px; border-radius:6px;">This navigation bar has class 'no-print' and is hidden when printing (try Ctrl+P to preview).</nav><p style="margin-top:10px;">This paragraph stays visible both on-screen and when printed.</p></div>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to CSS Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>CSS Programs &mdash; Program 75</footer>
+
+</body>
+</html>

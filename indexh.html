@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Programs</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>HTML Programs</h1>
+    <p>15 practical programs</p>
+  </header>
+
+  <main>
+    <input type="text" class="search-box" id="searchBox" placeholder="Search programs by name..." onkeyup="filterPrograms()">
+    <ol class="program-list">
+      <li><a href="html-basic-structure.html">Basic HTML Page Structure</a></li>
+      <li><a href="html-text-formatting.html">Text Formatting Tags</a></li>
+      <li><a href="html-lists.html">Ordered, Unordered &amp; Description Lists</a></li>
+      <li><a href="html-tables.html">HTML Tables (Timetable Example)</a></li>
+      <li><a href="html-registration-form.html">HTML Registration Form</a></li>
+      <li><a href="html-images-multimedia.html">Images and Multimedia (Audio/Video)</a></li>
+      <li><a href="html-links-navigation.html">Links and Navigation Bar</a></li>
+      <li><a href="html-semantic-layout.html">Semantic HTML5 Page Layout</a></li>
+      <li><a href="html-iframe-embed.html">iframe and Embedded Content</a></li>
+      <li><a href="html-entities-special-chars.html">HTML Entities and Special Characters</a></li>
+      <li><a href="html-meta-tags-seo.html">Meta Tags and SEO Basics</a></li>
+      <li><a href="html-canvas-basics.html">HTML5 Canvas Basics</a></li>
+      <li><a href="html-advanced-forms.html">Advanced Forms (fieldset, datalist, output)</a></li>
+      <li><a href="html-accessibility-aria.html">Accessibility Basics (ARIA &amp; alt text)</a></li>
+      <li><a href="html5-my_portfolio.html">My Portfolio</a></li>
+
+    </ol>
+
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+    </div>
+  </main>
+
+  <footer>HTML Programs Section</footer>
+
+<script>
+  function filterPrograms() {
+    const query = document.getElementById('searchBox').value.toLowerCase();
+    document.querySelectorAll('.program-list li').forEach(li => {
+      const text = li.textContent.toLowerCase();
+      li.style.display = text.includes(query) ? '' : 'none';
+    });
+  }
+</script>
+</body>
+</html>

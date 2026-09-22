@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grid: Gap Property</title>
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+.grid-gap-small, .grid-gap-large { display: grid; grid-template-columns: repeat(3, 1fr); margin-bottom: 14px; } .grid-gap-small { gap: 4px; } .grid-gap-large { gap: 20px; } .grid-gap-small > div, .grid-gap-large > div { background: var(--blue); color: #fff; padding: 16px; border-radius: 6px; text-align: center; }
+</style>
+</head>
+<body>
+
+  <header class="site-header"><h1>CSS Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>42. Grid: Gap Property</h1>
+      <p class="description">Demonstrates the gap (row-gap and column-gap) property between grid cells.</p>
+
+      <div class="demo-area">
+<h4>gap: 4px</h4><div class="grid-gap-small"><div>1</div><div>2</div><div>3</div></div><h4>gap: 20px</h4><div class="grid-gap-large"><div>1</div><div>2</div><div>3</div></div>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to CSS Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>CSS Programs &mdash; Program 42</footer>
+
+</body>
+</html>

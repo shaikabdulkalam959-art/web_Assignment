@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Basic CSS Shapes</title>
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+.shape-row { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; } .shp { width: 70px; height: 70px; background: var(--blue); } .shp-circle { border-radius: 50%; background: var(--accent); } .shp-oval { border-radius: 50%; width: 100px; height: 60px; background: var(--navy); } .shp-triangle { width: 0; height: 0; border-left: 35px solid transparent; border-right: 35px solid transparent; border-bottom: 60px solid var(--accent); }
+</style>
+</head>
+<body>
+
+  <header class="site-header"><h1>CSS Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>69. Basic CSS Shapes</h1>
+      <p class="description">Demonstrates building common shapes (square, circle, triangle, oval) purely with CSS borders and border-radius.</p>
+
+      <div class="demo-area">
+<div class="shape-row"><div class="shp shp-square"></div><div class="shp shp-circle"></div><div class="shp-triangle"></div><div class="shp shp-oval"></div></div>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to CSS Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>CSS Programs &mdash; Program 69</footer>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flexbox: order Property</title>
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+.order-row { display: flex; gap: 8px; background: var(--light-blue); padding: 10px; border-radius: 8px; } .order-row > div { background: var(--blue); color: #fff; padding: 10px; border-radius: 6px; }
+</style>
+</head>
+<body>
+
+  <header class="site-header"><h1>CSS Programs</h1></header>
+
+  <main>
+    <div class="program-page">
+      <h1>40. Flexbox: order Property</h1>
+      <p class="description">Demonstrates re-ordering flex items visually with the order property without changing HTML source order.</p>
+
+      <div class="demo-area">
+<div class="order-row"><div style="order:3;">Source 1st, shown 3rd</div><div style="order:1;">Source 2nd, shown 1st</div><div style="order:2;">Source 3rd, shown 2nd</div></div>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a class="secondary" href="index.html">Back to CSS Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>CSS Programs &mdash; Program 40</footer>
+
+</body>
+</html>
